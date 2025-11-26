@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSS Strength Infographic - Landscape Dense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&family=Rajdhani:wght@300;500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'vc-bg': '#0B1120',
+                        'vc-card': '#162032',
+                        'vc-accent': '#00E5FF', // Cyan electric
+                        'vc-green': '#00FF9D', // Neon Green
+                        'vc-orange': '#FF8400',
+                    },
+                    fontFamily: {
+                        'header': ['Oswald', 'sans-serif'],
+                        'tech': ['Rajdhani', 'sans-serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0B1120;
+            color: #e2e8f0;
+            overflow: hidden; /* Lock scroll for full screen feel */
+        }
+        
+        .glass-panel {
+            background: rgba(22, 32, 50, 0.95);
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .neon-border-green {
+            border-left: 3px solid #00FF9D;
+            box-shadow: -5px 0 15px -5px rgba(0, 255, 157, 0.3);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+        }
+
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Chart Animations */
+        @keyframes fillBar { from { width: 0; } to { width: 98%; } }
+        .animate-bar { animation: fillBar 1.5s ease-out forwards; }
+
+        /* Compact Layout Utilities */
+        .dense-text { line-height: 1.1; }
+        .section-title {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #94a3b8;
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body class="h-screen w-screen grid-bg flex flex-col p-4 box-border">
+
+    <!-- HEADER: Compact & Corporate -->
+    <header class="h-[10%] w-full flex justify-between items-center border-b border-slate-700 pb-2 mb-2">
+        <div class="w-48 h-full flex items-center">
+            <img src="Logo BSS - Copy.png" alt="BSS" class="max-h-12 object-contain">
+        </div>
+        <div class="text-center flex-grow">
+            <h1 class="font-header text-4xl font-bold text-white tracking-widest uppercase">
+                Strengths <span class="text-vc-green">Report</span> <span class="text-slate-500 font-light">2026</span>
+            </h1>
+            <div class="flex justify-center gap-6 mt-1 text-[10px] font-tech tracking-widest text-vc-accent">
+                <span>/// JOBSITE PERFORMANCE</span>
+                <span>/// STRATEGIC OUTLOOK</span>
+                <span>/// OPERATIONAL EXCELLENCE</span>
+            </div>
+        </div>
+        <div class="w-48 h-full flex items-center justify-end">
+            <img src="logo_agmbssr-removebg-preview.png" alt="AGM" class="max-h-12 object-contain">
+        </div>
+    </header>
+
+    <!-- MAIN BENTO GRID: Maximize Space -->
+    <!-- Grid Logic: 12 Cols x 6 Rows -->
+    <main class="h-[90%] w-full grid grid-cols-12 grid-rows-6 gap-3">
+
+        <!-- 1. LEFT TOP: STRATEGY (Cols 1-3, Rows 1-3) -->
+        <div class="col-span-3 row-span-3 glass-panel p-4 flex flex-col relative overflow-hidden group">
+            <div class="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-100 transition-opacity">
+                <i class="fas fa-crosshairs text-6xl text-vc-orange"></i>
+            </div>
+            <div class="section-title text-vc-orange">Primary Strategy Q1 2026</div>
+            <h2 class="font-header text-3xl text-white mb-1">PIT WARUTAS</h2>
+            <p class="text-xs text-slate-400 mb-4 dense-text">Exclusive mining activity concentration to maximize resource utilization.</p>
+            
+            <div class="flex-grow bg-slate-800/50 rounded border border-dashed border-slate-600 relative flex items-center justify-center">
+                <div class="absolute inset-0 grid grid-cols-4 grid-rows-4 opacity-20">
+                    <div class="border border-slate-600"></div><div class="border border-slate-600"></div><div class="border border-slate-600"></div><div class="border border-slate-600"></div>
+                    <div class="border border-slate-600"></div><div class="border border-slate-600 bg-vc-orange/20"></div><div class="border border-slate-600 bg-vc-orange/20"></div><div class="border border-slate-600"></div>
+                </div>
+                <div class="text-center z-10">
+                    <i class="fas fa-map-marker-alt text-vc-orange text-2xl animate-bounce"></i>
+                    <div class="text-[10px] font-tech text-white bg-black/50 px-2 mt-1 rounded">SINGLE FOCUS ZONE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. LEFT BOTTOM: ASSETS (Cols 1-3, Rows 4-6) -->
+        <div class="col-span-3 row-span-3 glass-panel p-4 flex flex-col">
+            <div class="section-title text-vc-accent">Asset Management</div>
+            <div class="flex items-center gap-3 mb-2">
+                <i class="fas fa-cubes text-2xl text-white"></i>
+                <h3 class="font-header text-xl text-white leading-none">HIGH STANDBY<br><span class="text-sm text-slate-400 font-normal">ASSET BUFFER</span></h3>
+            </div>
+            <p class="text-[10px] text-slate-400 mb-3 dense-text">Ready for immediate production adjustments.</p>
+            
+            <div class="space-y-2 mt-auto">
+                <div class="flex justify-between text-[10px] font-bold text-white uppercase">
+                    <span>Active Fleet</span>
+                    <span>Standby Buffer</span>
+                </div>
+                <div class="h-4 bg-slate-700 w-full rounded-sm flex overflow-hidden">
+                    <div class="h-full bg-slate-500 w-[70%]"></div>
+                    <div class="h-full bg-vc-accent w-[30%] striped-bg"></div>
+                </div>
+                <div class="flex justify-end">
+                    <span class="text-xs text-vc-accent font-tech">/// READY TO DEPLOY</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. MID TOP: HERO METRIC (Cols 4-7, Rows 1-4) -->
+        <div class="col-span-4 row-span-4 glass-panel p-6 flex flex-col justify-between neon-border-green relative">
+            <div class="absolute top-4 right-4 text-right">
+                <div class="text-[10px] text-slate-400 uppercase tracking-widest">Performance Period</div>
+                <div class="text-xs font-bold text-white">OCT - NOV</div>
+            </div>
+            
+            <div class="mt-2">
+                <div class="section-title text-vc-green border-none mb-0">PLANT AGM PERFORMANCE</div>
+                <h2 class="font-header text-2xl text-white">IPMS IMPLEMENTATION</h2>
+            </div>
+
+            <div class="flex items-center gap-6 my-2">
+                <div class="text-[100px] leading-none font-header font-bold text-transparent bg-clip-text bg-gradient-to-r from-vc-green to-emerald-600 neon-text">
+                    98<span class="text-4xl align-top text-white">%</span>
+                </div>
+                <div class="space-y-2 flex-grow">
+                    <div class="bg-slate-800 p-2 rounded border-l-2 border-vc-green">
+                        <div class="text-[10px] text-slate-400 uppercase">Target Achievement</div>
+                        <div class="h-1.5 bg-slate-700 w-full mt-1 rounded"><div class="h-full bg-vc-green animate-bar"></div></div>
+                    </div>
+                    <div class="bg-slate-800 p-2 rounded border-l-2 border-vc-green">
+                         <div class="text-[10px] text-slate-400 uppercase">System Stability</div>
+                         <div class="text-xs font-bold text-white">STABLE <i class="fas fa-check-circle text-vc-green ml-1"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. MID RIGHT TOP: TECH (Cols 8-9, Rows 1-4) -->
+        <div class="col-span-2 row-span-4 glass-panel p-4 flex flex-col">
+            <div class="section-title text-blue-400">Digital Ecosystem</div>
+            
+            <div class="flex-grow flex flex-col justify-center mb-2 border-b border-slate-700 pb-2">
+                <div class="flex justify-between items-center mb-1">
+                    <span class="font-tech text-xl text-white font-bold">VITA UNIV.</span>
+                    <i class="fas fa-satellite-dish text-blue-400"></i>
+                </div>
+                <div class="text-[10px] text-slate-400">INSTALLED ON:</div>
+                <div class="text-xs font-bold text-blue-300">ALL HAULER AGM</div>
+            </div>
+
+            <div class="flex-grow flex flex-col justify-center">
+                <div class="flex justify-between items-center mb-1">
+                    <span class="font-tech text-xl text-white font-bold">LORA IoT</span>
+                    <i class="fas fa-wifi text-blue-400"></i>
+                </div>
+                <div class="text-[10px] text-slate-400">INTEGRATED ON:</div>
+                <div class="text-xs font-bold text-blue-300">DONGFENG UNITS</div>
+            </div>
+        </div>
+
+        <!-- 5. RIGHT TOP: VERSATILITY (Cols 10-12, Rows 1-4) -->
+        <!-- Moved UP in DOM to ensure it fills the top right corner correctly -->
+        <div class="col-span-3 row-span-4 glass-panel p-4 flex flex-col">
+            <div class="section-title text-pink-500">Operator Versatility</div>
+            <p class="text-[10px] text-slate-400 mb-3">Multi-skilled workforce enables seamless backup operations.</p>
+            
+            <div class="flex-grow space-y-3">
+                <div class="flex items-center justify-between bg-gradient-to-r from-slate-800 to-slate-900 p-2 rounded border border-slate-700">
+                    <div class="text-center w-1/3">
+                        <div class="font-bold text-white text-sm">CMT</div>
+                        <div class="text-[9px] text-slate-500">PRIMARY</div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-1/3">
+                        <i class="fas fa-arrow-right text-pink-500"></i>
+                        <span class="text-[8px] text-pink-500 font-bold">BACKUP 2X</span>
+                    </div>
+                    <div class="text-center w-1/3">
+                        <div class="font-bold text-white text-sm">GRADER</div>
+                        <div class="text-[9px] text-slate-500">SECONDARY</div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between bg-gradient-to-r from-slate-800 to-slate-900 p-2 rounded border border-slate-700">
+                    <div class="text-center w-1/3">
+                        <div class="font-bold text-white text-sm">COMPACT</div>
+                        <div class="text-[9px] text-slate-500">PRIMARY</div>
+                    </div>
+                    <div class="flex flex-col items-center justify-center w-1/3">
+                        <i class="fas fa-arrow-right text-pink-500"></i>
+                        <span class="text-[8px] text-pink-500 font-bold">BACKUP 1X</span>
+                    </div>
+                    <div class="text-center w-1/3">
+                        <div class="font-bold text-white text-sm">DOZER</div>
+                        <div class="text-[9px] text-slate-500">SECONDARY</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-auto text-center">
+                <span class="text-[9px] bg-slate-800 px-2 py-1 rounded text-slate-300 uppercase tracking-wide">
+                    <i class="fas fa-sync mr-1"></i> Optimization Active
+                </span>
+            </div>
+        </div>
+
+        <!-- 6. MID BOTTOM 1: VENDOR (Cols 4-6, Rows 5-6) -->
+        <div class="col-span-3 row-span-2 glass-panel p-3 flex items-center gap-4">
+            <div class="bg-slate-800 p-3 rounded-full border border-slate-600">
+                <i class="fas fa-handshake text-yellow-500 text-xl"></i>
+            </div>
+            <div>
+                <div class="text-[10px] text-slate-400 uppercase">Strategic Partnership</div>
+                <div class="font-header text-lg text-white">DEDICATED VENDOR (THM)</div>
+                <div class="text-[10px] bg-slate-700 text-slate-300 inline-block px-1 rounded">HOSE FITTING (CHINA BRAND)</div>
+            </div>
+        </div>
+
+        <!-- 7. MID BOTTOM 2: INFRA (Cols 7-9, Rows 5-6) -->
+        <div class="col-span-3 row-span-2 glass-panel p-3 flex items-center gap-4">
+            <div class="bg-slate-800 p-3 rounded-full border border-slate-600">
+                <i class="fas fa-industry text-purple-400 text-xl"></i>
+            </div>
+            <div>
+                <div class="text-[10px] text-slate-400 uppercase">Facility Update</div>
+                <div class="font-header text-lg text-white">COMEX WORKSHOP</div>
+                <div class="text-[10px] bg-purple-900/50 text-purple-300 inline-block px-1 rounded">DEDICATED AGM INFRA</div>
+            </div>
+        </div>
+
+        <!-- 8. RIGHT BOTTOM: CULTURE (Cols 10-12, Rows 5-6) -->
+        <div class="col-span-3 row-span-2 glass-panel p-3 flex flex-col justify-center">
+             <div class="flex justify-between items-center border-b border-slate-700 pb-1 mb-2">
+                <span class="font-header text-white">CULTURE & SHIFT</span>
+                <i class="fas fa-users text-slate-400"></i>
+             </div>
+             <div class="grid grid-cols-2 gap-2">
+                 <div class="bg-slate-800/50 p-2 rounded">
+                     <div class="text-[9px] text-slate-400">INITIATIVE</div>
+                     <div class="text-xs text-white font-bold">HIGH PROACTIVITY</div>
+                     <div class="text-[8px] text-green-400">ALL DEPARTMENTS</div>
+                 </div>
+                 <div class="bg-slate-800/50 p-2 rounded">
+                     <div class="text-[9px] text-slate-400">SHIFT METHOD</div>
+                     <div class="text-xs text-white font-bold">FIFO / LIFO</div>
+                     <div class="text-[8px] text-green-400">CONSISTENT (OB/COAL)</div>
+                 </div>
+             </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
